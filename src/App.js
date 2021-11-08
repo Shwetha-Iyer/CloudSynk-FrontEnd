@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Mainpage from "./components/mainpage";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import Login from './components/login';
+import Signup from './components/signup';
+import Forgot from './components/forgot';
+import Dashboard from './components/dashboard';
+import Resetpassword from './components/resetpassword';
+import Activate from './components/activate';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <>
+  <Router>
+    <Switch>
+      <Route path="/" component={Mainpage} exact={true}/>
+      <Route path="/login" component={Login} exact={true}/>
+      <Route path="/signup" component={Signup} exact={true}/>
+      <Route path="/forgot" component={Forgot} exact={true}/>
+      <Route path="/dashboard" component={Dashboard} exact={true}/>
+      <Route path="/resetpass/:token" component={Resetpassword} exact={true}/>
+      <Route path="/activateaccount/:token" component={Activate} exact={true}/>
+    </Switch>
+  </Router>
+  </>
 }
 
 export default App;
