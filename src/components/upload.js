@@ -97,7 +97,7 @@ export default function Upload(props){
       setClick(1);
       let currentfilesize = acceptedFiles.reduce((a, b) => ({size: a.size + b.size}));
       let totalfilesize = filesize.size+currentfilesize.size;
-      console.log(acceptedFiles);
+      //console.log(acceptedFiles);
         if(acceptedFiles.length===0){
           toast.error("Please select files to upload");
           setClick(0);
