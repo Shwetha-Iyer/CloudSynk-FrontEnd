@@ -55,7 +55,7 @@ export default function Login(){
                     validationSchema={SignupSchema}
                     onSubmit={(values,{resetForm}) => {
                         // same shape as initial values
-                        console.log(values);
+                        //console.log(values);
                         axios.post("https://cloudsynk-backend.herokuapp.com/auth/login",{
                             email:values.email,
                             password:values.password
