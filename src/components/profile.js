@@ -16,7 +16,7 @@ export default function Profile(props){
           withCredentials: true,
           crossDomain: true
         }).then((res) => {
-          console.log(res);
+          //console.log(res);
           if(res.status===200){
               chartdata={
                 images:0,
@@ -69,7 +69,7 @@ export default function Profile(props){
                             })
                         }
                         {
-                            console.log(chartdata)
+                            //console.log(chartdata)
                         }
                         <div id="chart_wrap">
                             <div id="chart_div">
