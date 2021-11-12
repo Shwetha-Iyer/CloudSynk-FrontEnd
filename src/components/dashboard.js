@@ -23,7 +23,7 @@ export default function Dashboard(){
           withCredentials: true,
           crossDomain: true
         }).then((res) => {
-          console.log(res);
+          //console.log(res);
           if(res.status===200){
             console.log("Logged out");
             history.push(`/login`);
@@ -41,7 +41,7 @@ export default function Dashboard(){
           withCredentials: true,
           crossDomain: true
         }).then((res) => {
-          console.log(res);
+          //console.log(res);
           if(res.status===200){
             console.log("Logged in");
             setInfo({_id:res.data.sessUser.id,firstname:res.data.sessUser.firstname});

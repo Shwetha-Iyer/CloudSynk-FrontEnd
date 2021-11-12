@@ -35,7 +35,7 @@ export default function Resetpassword(props){
           withCredentials: true,
           crossDomain: true
         }).then((res) => {
-          console.log(res);
+          //console.log(res);
           if(res.status===200){
             setPage(1);
           }
@@ -133,6 +133,7 @@ export default function Resetpassword(props){
                                 console.log("success");
                                 setClick(0);
                                 resetForm();
+                                toast.success("Password has been changed successfully!");
                                 history.push("/login");
                             }
                         })

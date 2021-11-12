@@ -20,7 +20,7 @@ function App() {
       <Route path="/signup" component={Signup} exact={true}/>
       <Route path="/forgot" component={Forgot} exact={true}/>
       <Route path="/dashboard" component={Dashboard} exact={true}/>
-      <Route path="/resetpass/:token" component={Resetpassword} exact={true}/>
+      <Route path="/resetpassword/:token" component={Resetpassword} exact={true}/>
       <Route path="/activateaccount/:token" component={Activate} exact={true}/>
     </Switch>
   </Router>

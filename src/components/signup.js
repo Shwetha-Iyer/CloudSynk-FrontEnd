@@ -37,7 +37,7 @@ export default function Signup(){
           withCredentials: true,
           crossDomain: true
         }).then((res) => {
-          console.log(res);
+          //console.log(res);
           if(res.status===200){
             console.log("Logged in");
             history.push(`/dashboard`);

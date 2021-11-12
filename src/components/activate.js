@@ -15,7 +15,7 @@ export default function Activate(props){
           withCredentials: true,
           crossDomain: true
         }).then((res) => {
-          console.log(res);
+          //console.log(res);
           if(res.status===200){
             toast.success("Account Activated!");
             setPage(1);

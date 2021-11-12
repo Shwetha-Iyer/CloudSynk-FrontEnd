@@ -27,7 +27,7 @@ export default function Forgot(){
                     validationSchema={SignupSchema}
                     onSubmit={(values,{resetForm}) => {
                         // same shape as initial values
-                        console.log(values);
+                        //console.log(values);
                         axios.put("https://cloudsynk-backend.herokuapp.com/auth/forgot",{email:values.email},{
                             headers:{
                                 'Content-Type': 'application/json'
@@ -35,7 +35,7 @@ export default function Forgot(){
                             withCredentials: true,
                             crossDomain: true
                         }).then((res) => {
-                            console.log(res);
+                            //console.log(res);
                             if(res.status===200){
                                 toast.success("Password reset link has been sent to your email!");
                                 setClick(0);
