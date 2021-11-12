@@ -69,7 +69,7 @@ export default function Profile(props){
                             })
                         }
                         {
-                            console.log(chartdata)
+                            //console.log(chartdata)
                         }
                         <div id="chart_wrap">
                             <div id="chart_div">
