@@ -28,7 +28,7 @@ export default function Forgot(){
                     onSubmit={(values,{resetForm}) => {
                         // same shape as initial values
                         console.log(values);
-                        axios.put("http://localhost:3100/auth/forgot",{email:values.email},{
+                        axios.put("https://cloudsynk-backend.herokuapp.com/auth/forgot",{email:values.email},{
                             headers:{
                                 'Content-Type': 'application/json'
                             },

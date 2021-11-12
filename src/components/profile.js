@@ -9,7 +9,7 @@ export default function Profile(props){
     let [result,setResult] = useState(0);
     let [filesize,setFilesize] = useState({size:0});
     useEffect(()=>{
-        axios.get(`http://localhost:3100/users/getfiles/${props.data._id}`,{
+        axios.get(`https://cloudsynk-backend.herokuapp.com/users/getfiles/${props.data._id}`,{
           headers:{
             'Content-Type': 'application/json'
           },

@@ -28,7 +28,7 @@ export default function Resetpassword(props){
     let [click,setClick] = useState(0);
     let history = useHistory();
     useEffect(()=>{
-        axios.post(`http://localhost:3100/auth/resetpwdcheck/${props.match.params.token}`,{
+        axios.post(`https://cloudsynk-backend.herokuapp.com/auth/resetpwdcheck/${props.match.params.token}`,{
           headers:{
             'Content-Type': 'application/json'
           },
@@ -64,7 +64,7 @@ export default function Resetpassword(props){
                     onSubmit={(values,{resetForm}) => {
                         // same shape as initial values
                         console.log(values);
-                        axios.post(`http://localhost:3100/auth/resetpwdcheck/${props.match.params.token}`,{
+                        axios.post(`https://cloudsynk-backend.herokuapp.com/auth/resetpwdcheck/${props.match.params.token}`,{
                             secret:values.secret,
                         },{
                             headers:{
@@ -119,7 +119,7 @@ export default function Resetpassword(props){
                     onSubmit={(values,{resetForm}) => {
                         // same shape as initial values
                         console.log(values);
-                        axios.put(`http://localhost:3100/auth/resetpwd/${props.match.params.token}`,{
+                        axios.put(`https://cloudsynk-backend.herokuapp.com/auth/resetpwd/${props.match.params.token}`,{
                             password:values.password,
                         },{
                             headers:{

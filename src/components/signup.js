@@ -30,7 +30,7 @@ export default function Signup(){
     let [click,setClick] = useState(0);
     let history = useHistory();
     useEffect(()=>{
-        axios.get("http://localhost:3100/auth/authchecker",{
+        axios.get("https://cloudsynk-backend.herokuapp.com/auth/authchecker",{
           headers:{
             'Content-Type': 'application/json'
           },
@@ -66,7 +66,7 @@ export default function Signup(){
                     validationSchema={SignupSchema}
                     onSubmit={(values,{resetForm}) => {
                         // same shape as initial values
-                        axios.post("http://localhost:3100/auth/register",{
+                        axios.post("https://cloudsynk-backend.herokuapp.com/auth/register",{
                             firstname:values.firstName,
                             lastname:values.lastName,
                             email:values.email,

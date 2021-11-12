@@ -16,7 +16,7 @@ export default function Dashboard(){
     let [page,setPage] = useState(0);
     let [info,setInfo] = useState({});
     let handlelogout = ()=>{
-      axios.delete("http://localhost:3100/auth/logout",{
+      axios.delete("https://cloudsynk-backend.herokuapp.com/auth/logout",{
           headers:{
             'Content-Type': 'application/json'
           },
@@ -34,7 +34,7 @@ export default function Dashboard(){
         });
     }
     useEffect(()=>{
-        axios.get("http://localhost:3100/auth/authchecker",{
+        axios.get("https://cloudsynk-backend.herokuapp.com/auth/authchecker",{
           headers:{
             'Content-Type': 'application/json'
           },

@@ -6,7 +6,7 @@ const axios = require("axios");
 export default function Mainpage(){
     let history = useHistory();
     useEffect(()=>{
-        axios.get("http://localhost:3100/auth/authchecker",{
+        axios.get("https://cloudsynk-backend.herokuapp.com/auth/authchecker",{
           headers:{
             'Content-Type': 'application/json'
           },

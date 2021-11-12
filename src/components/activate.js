@@ -8,7 +8,7 @@ export default function Activate(props){
     let [page,setPage] = useState(0);
     let history = useHistory();
     useEffect(()=>{
-        axios.put(`http://localhost:3100/auth/activate/${props.match.params.token}`,{
+        axios.put(`https://cloudsynk-backend.herokuapp.com/auth/activate/${props.match.params.token}`,{
           headers:{
             'Content-Type': 'application/json'
           },

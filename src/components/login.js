@@ -22,7 +22,7 @@ export default function Login(){
     let history = useHistory();
     let [click,setClick] = useState(0);
     useEffect(()=>{
-        axios.get("http://localhost:3100/auth/authchecker",{
+        axios.get("https://cloudsynk-backend.herokuapp.com/auth/authchecker",{
           headers:{
             'Content-Type': 'application/json'
           },
@@ -56,7 +56,7 @@ export default function Login(){
                     onSubmit={(values,{resetForm}) => {
                         // same shape as initial values
                         console.log(values);
-                        axios.post("http://localhost:3100/auth/login",{
+                        axios.post("https://cloudsynk-backend.herokuapp.com/auth/login",{
                             email:values.email,
                             password:values.password
                         },{

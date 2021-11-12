@@ -7,7 +7,7 @@ export default function Myfiles(props){
     let [page,setPage] = useState(0);
     let [files,setFiles] = useState([]);
     useEffect(()=>{
-        axios.get(`http://localhost:3100/users/getfiles/${props.data._id}`,{
+        axios.get(`https://cloudsynk-backend.herokuapp.com/users/getfiles/${props.data._id}`,{
           headers:{
             'Content-Type': 'application/json'
           },

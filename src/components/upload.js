@@ -35,7 +35,7 @@ export default function Upload(props){
   let [click,setClick] = useState(0);
   let [filesize,setFilesize] = useState({size:0});
   useEffect(()=>{
-    axios.get(`http://localhost:3100/users/getfiles/${props.data._id}`,{
+    axios.get(`https://cloudsynk-backend.herokuapp.com/users/getfiles/${props.data._id}`,{
       headers:{
         'Content-Type': 'application/json'
       },
@@ -109,8 +109,8 @@ export default function Upload(props){
         acceptedFiles.forEach((tempfile)=>{
             let fileup = new FormData();
             fileup.append("image",tempfile,tempfile.name);
-            axios.post("http://localhost:3100/api/uploadImage",fileup).then((result)=>{
-              axios.put(`http://localhost:3100/users/storefiles/${props.data._id}`,{
+            axios.post("https://cloudsynk-backend.herokuapp.com/api/uploadImage",fileup).then((result)=>{
+              axios.put(`https://cloudsynk-backend.herokuapp.com/users/storefiles/${props.data._id}`,{
                 filename:tempfile.name,
                 size:tempfile.size,
                 type:tempfile.type,
@@ -154,7 +154,7 @@ export default function Upload(props){
             {
                 
                 files1.map((items)=>{
-                    return <div key={items.path}>
+                    return <div key={items.name}>
                     <button type="button" className="btn btn-success mx-2 my-2">{items}</button>
                     </div>
                 })
